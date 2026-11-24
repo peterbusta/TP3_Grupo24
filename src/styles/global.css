@@ -825,9 +825,16 @@ button {
   box-shadow: inset 0 0 0 3px var(--color-sky-500);
 }
 
-.accordion__icon {
-  font-size: 0.88rem;
+.accordion__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--color-sky-600);
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.accordion__icon {
   flex-shrink: 0;
 }
 

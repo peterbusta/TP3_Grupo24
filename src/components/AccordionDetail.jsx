@@ -16,8 +16,11 @@ export default function AccordionDetail({ code, label, details }) {
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <span>{label}</span>
-        <span className="accordion__icon" aria-hidden="true">
-          {isOpen ? '▲ Ocultar detalle' : '▼ Desplegar detalle'}
+        <span className="accordion__status">
+          <span className="accordion__icon" aria-hidden="true">
+            {isOpen ? '▲' : '▼'}
+          </span>
+          {isOpen ? 'Ocultar detalle' : 'Desplegar detalle'}
         </span>
       </button>
 
