@@ -6,7 +6,7 @@ export default function StudyMatchLogo({ variant = 'header' }) {
       className={`brand-logo ${isHero ? 'brand-logo--hero' : 'brand-logo--header'}`}
     >
       <img
-        src="/assets/logo-studymatch.png"
+        src={`${import.meta.env.BASE_URL}assets/logo-studymatch.png`}
         alt="Logo original de StudyMatch (startup creada por estudiantes del IFTS 16)"
         className="brand-logo__img"
       />
