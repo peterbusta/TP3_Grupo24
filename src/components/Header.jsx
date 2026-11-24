@@ -1,12 +1,16 @@
 import { NAV_ITEMS } from '../data/content';
-import LogoPlaceholder from './LogoPlaceholder';
+import StudyMatchLogo from './StudyMatchLogo';
 
 export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a href="#inicio" aria-label="Volver al inicio de StudyMatch">
-          <LogoPlaceholder variant="compact" />
+        <a
+          href="#inicio"
+          className="header-brand-link"
+          aria-label="Volver al inicio de StudyMatch"
+        >
+          <StudyMatchLogo variant="header" />
         </a>
 
         <nav aria-label="Navegación principal">

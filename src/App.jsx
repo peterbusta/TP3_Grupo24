@@ -9,17 +9,6 @@ import { PROJECT_INFO, RULES } from './data/content';
 export default function App() {
   return (
     <>
-      <div className="stage-banner" role="note">
-        <div className="container stage-banner__inner">
-          <span>
-            <span className="stage-badge">Etapa 1 · Estructura base</span> Maquetación
-            inicial con contenido de prueba claramente identificado y espacios reservados
-            para logo y diagramas.
-          </span>
-          <span>{PROJECT_INFO.assignedBlock}</span>
-        </div>
-      </div>
-
       <Header />
 
       <main>
@@ -34,9 +23,9 @@ export default function App() {
                 Dos sentencias, dos soluciones: R3 y R4
               </h2>
               <p className="section-subtitle">
-                Cada tarjeta conserva literalmente la sentencia original, presenta su
-                propuesta de solución, reserva el espacio para su diagrama conceptual
-                independiente e incluye un desplegable accesible por clic y teclado.
+                Cada tarjeta conserva literalmente la sentencia original, expone la
+                propuesta de solución, ilustra el flujo conceptual con sus caminos SÍ y
+                NO e incluye un desplegable accesible con el análisis completo del Grupo 24.
               </p>
             </div>
 
