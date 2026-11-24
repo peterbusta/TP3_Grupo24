@@ -107,7 +107,6 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
       > * **C3 — Textos provisorios visibles y renderizados en el sitio final:**
       >   * `"Aporte individual a completar por el equipo."` (×4) en `src/data/content.js` (Líneas 134, 139, 144, 149).
       >   * `"Espacio destinado a registrar los aportes individuales de cada integrante en las próximas etapas del trabajo práctico."` en `src/components/TeamSection.jsx` (Líneas 11–12).
-      > * **C4 — Variables CSS huérfanas con semántica de placeholder de Etapa 1 (`src/styles/variables.css`):** Desaparecieron `--color-placeholder-bg`, `--color-placeholder-border` y `--color-placeholder-text`, pero las reglas `.placeholder-notice` y el borde dashed heredado de `.member-card__contribution` permanecen en `global.css` cayendo a `undefined`.
       >
       > #### 🟡 Mejoras Visuales / UX
       > * **M1 — `scroll-margin-top` de `.hero` (`#inicio`) insuficiente (`src/styles/global.css`, Líneas 204–208):** El header fijo mide ≈ 102 px y `.hero` no tiene `scroll-margin-top` (`.section` tiene `88px`). Recomendación: usar `scroll-margin-top: 108px` en `.section` y `.hero`.

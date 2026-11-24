@@ -62,15 +62,6 @@ Los cuatro campos `contribution` de los integrantes muestran texto de relleno id
 
 ---
 
-### C4 — Variables CSS huérfanas con semántica de placeholder de Etapa 1
-**Archivo:** [`src/styles/variables.css`](file:///home/pedro/Repos/TP3_Grupo24/src/styles/variables.css) *(rama `etapa-2-diagramas`)*
-
-El archivo `variables.css` **no define** `--color-placeholder-bg`, `--color-placeholder-border`, `--color-placeholder-text` en la rama actual. Sin embargo, el CSS de `global.css` generado en Etapa 1 usaba esas variables para `.placeholder-notice` y `.member-card__contribution` con borde punteado. El diff del commit `60fbc09` muestra que el archivo `variables.css` fue reemplazado y esas vars desaparecieron, pero las reglas `.placeholder-notice` y el antiguo estilo de borde dashed de `.member-card__contribution` **no fueron eliminadas del `global.css`** — resultan en propiedades con valor `undefined` (caen al initial del navegador) sin error explícito, pero con potencial visual inconsistente.
-
-> [!NOTE] Verificar con `grep placeholder src/styles/global.css`: si existen reglas `.placeholder-notice { … }` o referencias a `var(--color-placeholder-…)` todavía presentes, eliminarlas junto con C3.
-
----
-
 ## 🟡 Mejoras Visuales / UX
 
 ### M1 — `scroll-margin-top` de `.hero` (#inicio) podría ser insuficiente
