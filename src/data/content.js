@@ -16,8 +16,8 @@ export const PROJECT_INFO = {
     'Red que conecta estudiantes por materias, intereses, necesidades y disponibilidad.',
   assignedBlock: 'S13-B · Invitación y consentimiento',
   groupName: 'Grupo 24',
-  heroNeedPlaceholder:
-    '[Contenido de prueba — Etapa 1] Espacio reservado para redactar con el equipo el resumen de la necesidad académica que da origen a StudyMatch, sin inventar contenido adicional hasta su revisión.',
+  heroNeedText:
+    'Estudiar en grupo potencia el aprendizaje, pero encontrar compañeros afines suele derivar en contactos no deseados, invitaciones invasivas o coordinaciones fallidas por incompatibilidad horaria. StudyMatch ayuda a estudiantes a conectar con pares compatibles por materias, intereses, necesidades y disponibilidad, cuidando el consentimiento y la disponibilidad real en cada paso.',
 };
 
 export const RULES = [
@@ -30,13 +30,48 @@ export const RULES = [
       '«Si hay un compañero compatible y el estudiante autoriza contactarlo, el sistema envía una invitación sin incorporarlo automáticamente a un grupo».',
     proposalTitle: 'Invitación inteligente con consentimiento',
     keyClarification:
-      'Condición explícita: enviar una invitación no incorpora automáticamente al estudiante a un grupo.',
-    diagramTitle: 'Espacio reservado — Diagrama conceptual del flujo R3',
-    diagramNote:
-      '[Pendiente para próxima etapa] Aquí se incorporará el diagrama independiente de R3 con inicio, entradas, decisión (SÍ / NO), acciones, resultado final, intervención humana y distinción entre regla original y decisiones de diseño del Grupo 24.',
-    accordionLabel: 'Ver detalles de la propuesta R3 (Etapa 1 · Contenido de prueba)',
-    accordionPlaceholder:
-      '[Contenido de prueba — Etapa 1] Espacio reservado para ampliar los detalles operativos, casos límite y decisiones de diseño del Grupo 24 para R3. Este bloque desplegable ya es accesible por clic y teclado.',
+      'Enviar una invitación no incorpora automáticamente al estudiante a un grupo.',
+    diagram: {
+      title: 'Diagrama conceptual del flujo R3 — Invitación inteligente con consentimiento',
+      start: 'Se detecta un posible compañero compatible.',
+      inputs: [
+        'Perfil compatible (materia, interés, disponibilidad).',
+        'Estado de autorización del estudiante para contactar.',
+      ],
+      decision: '¿Existe compañero compatible Y el estudiante autorizó contactarlo?',
+      yesBranch: {
+        label: 'SÍ',
+        sourceTag: 'Regla original R3',
+        actionTitle: 'Envío de invitación con consentimiento',
+        actionText:
+          'El agente envía la invitación de contacto al compañero compatible SIN incorporar automáticamente al estudiante a un grupo.',
+        endText: 'Fin · Invitación enviada (sin alta automática en un grupo)',
+      },
+      noBranch: {
+        label: 'NO',
+        sourceTag: 'Decisión de diseño · Grupo 24',
+        humanIntervention: true,
+        actionTitle: 'Bloqueo preventivo y espera de autorización',
+        actionText:
+          'No se envía la invitación. Si hay compatibilidad pero falta autorización, el agente bloquea el envío y deja la sugerencia en espera para revisión manual del estudiante.',
+        endText: 'Fin · Envío bloqueado (en espera de revisión manual)',
+      },
+    },
+    accordionLabel: 'Ver detalle funcional y decisiones de diseño de R3',
+    details: {
+      inputs:
+        'Perfil del compañero potencialmente compatible (materias en curso, intereses académicos, necesidades de estudio y franjas de disponibilidad) junto con el estado de autorización explícita del estudiante para iniciar el contacto.',
+      conceptualTools:
+        'Motor conceptual de compatibilidad académica (para contrastar perfiles) y gestor conceptual de consentimiento (para verificar si el estudiante habilitó el contacto). Uso estrictamente conceptual, sin implementación técnica.',
+      condition:
+        'Evalúa de forma conjunta dos requisitos: que exista un compañero compatible y que el estudiante haya autorizado explícitamente contactarlo.',
+      actionAndResult:
+        'Propone enviar una invitación de contacto personalizada hacia el compañero compatible. El resultado esperado es una invitación emitida bajo consentimiento, sin incorporar automáticamente al estudiante a ningún grupo de estudio.',
+      originalRuleScope:
+        'La exigencia de compatibilidad más autorización previa para enviar la invitación, y la restricción explícita de no sumar automáticamente al estudiante a un grupo.',
+      groupDesignDecision:
+        'Ante el caso límite donde existe compatibilidad pero falta autorización del estudiante, el agente bloquea el envío para evitar contactos no deseados y deja la sugerencia en espera, requiriendo intervención humana (revisión manual del estudiante) para autorizarla o descartarla.',
+    },
   },
   {
     id: 'regla-r4',
@@ -47,13 +82,48 @@ export const RULES = [
       '«Si ambas personas aceptan la invitación y mantienen una disponibilidad común, el sistema habilita el espacio para organizar el encuentro».',
     proposalTitle: 'Habilitación del espacio de encuentro',
     keyClarification:
-      'Condición explícita: ambas condiciones (aceptación mutua y disponibilidad común) deben cumplirse para alcanzar el resultado.',
-    diagramTitle: 'Espacio reservado — Diagrama conceptual del flujo R4',
-    diagramNote:
-      '[Pendiente para próxima etapa] Aquí se incorporará el diagrama independiente de R4 con inicio, entradas, evaluación de ambas condiciones (SÍ / NO), acciones, resultado final, intervención humana y distinción entre regla original y decisiones de diseño del Grupo 24.',
-    accordionLabel: 'Ver detalles de la propuesta R4 (Etapa 1 · Contenido de prueba)',
-    accordionPlaceholder:
-      '[Contenido de prueba — Etapa 1] Espacio reservado para detallar la verificación de aceptación mutua, disponibilidad común y excepciones definidas por el Grupo 24 para R4. Este bloque desplegable ya es accesible por clic y teclado.',
+      'Ambas condiciones (aceptación mutua y disponibilidad común vigente) deben cumplirse para alcanzar el resultado.',
+    diagram: {
+      title: 'Diagrama conceptual del flujo R4 — Habilitación del espacio de encuentro',
+      start: 'Se reciben respuestas a una invitación enviada.',
+      inputs: [
+        'Estado de aceptación de ambas personas.',
+        'Agendas de disponibilidad actualizadas de ambos estudiantes.',
+      ],
+      decision: '¿Ambas personas aceptaron la invitación Y mantienen una disponibilidad común?',
+      yesBranch: {
+        label: 'SÍ',
+        sourceTag: 'Regla original R4',
+        actionTitle: 'Habilitación del espacio privado',
+        actionText:
+          'El agente habilita el espacio privado para que ambos estudiantes organicen su encuentro de estudio.',
+        endText: 'Fin · Espacio privado de encuentro habilitado',
+      },
+      noBranch: {
+        label: 'NO',
+        sourceTag: 'Decisión de diseño · Grupo 24',
+        humanIntervention: true,
+        actionTitle: 'Pausa ante choque de horarios y aviso',
+        actionText:
+          'No se habilita el espacio. Si ambos aceptaron pero uno modificó su horario y ya no coinciden, el agente pausa la habilitación, notifica el choque de horarios y solicita intervención humana para acordar una nueva franja.',
+        endText: 'Fin · Habilitación pausada (pendiente de acuerdo humano)',
+      },
+    },
+    accordionLabel: 'Ver detalle funcional y decisiones de diseño de R4',
+    details: {
+      inputs:
+        'Estado de respuesta a la invitación de ambas personas (aceptada, pendiente o rechazada) y agendas de disponibilidad horaria actualizadas de los dos estudiantes.',
+      conceptualTools:
+        'Registro conceptual de estado de invitaciones (para validar la aceptación bilateral) y comparador conceptual de agendas horarias (para verificar coincidencias vigentes). Uso estrictamente conceptual, sin implementación técnica.',
+      condition:
+        'Evalúa en simultáneo que las dos personas hayan aceptado la invitación y que continúen manteniendo al menos una franja de disponibilidad común.',
+      actionAndResult:
+        'Propone habilitar el espacio privado de coordinación entre los dos estudiantes. El resultado esperado es un entorno consensuado y listo para organizar el encuentro sin fricciones horarias.',
+      originalRuleScope:
+        'La habilitación del espacio para organizar el encuentro condicionada al cumplimiento conjunto de la aceptación mutua y la disponibilidad común.',
+      groupDesignDecision:
+        'Ante el caso límite en el que ambas personas aceptaron la invitación pero una modificó su horario y se perdió la coincidencia, el agente pausa la habilitación, notifica el choque de horarios y solicita intervención humana para que acuerden una nueva franja común (y si alguna parte no aceptó, directamente no se habilita el espacio).',
+    },
   },
 ];
 
@@ -61,21 +131,21 @@ export const TEAM_MEMBERS = [
   {
     name: 'Brian',
     group: 'Grupo 24 · IFTS 29',
-    contribution: '[Contenido de prueba] Aporte individual pendiente de completar.',
+    contribution: 'Aporte individual a completar por el equipo.',
   },
   {
     name: 'Ludmila',
     group: 'Grupo 24 · IFTS 29',
-    contribution: '[Contenido de prueba] Aporte individual pendiente de completar.',
+    contribution: 'Aporte individual a completar por el equipo.',
   },
   {
     name: 'Pedro',
     group: 'Grupo 24 · IFTS 29',
-    contribution: '[Contenido de prueba] Aporte individual pendiente de completar.',
+    contribution: 'Aporte individual a completar por el equipo.',
   },
   {
     name: 'Flavia',
     group: 'Grupo 24 · IFTS 29',
-    contribution: '[Contenido de prueba] Aporte individual pendiente de completar.',
+    contribution: 'Aporte individual a completar por el equipo.',
   },
 ];

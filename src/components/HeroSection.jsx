@@ -1,5 +1,5 @@
 import { PROJECT_INFO } from '../data/content';
-import LogoPlaceholder from './LogoPlaceholder';
+import StudyMatchLogo from './StudyMatchLogo';
 
 export default function HeroSection() {
   return (
@@ -47,10 +47,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <aside className="hero-card" aria-label="Identidad visual y necesidad">
-          <LogoPlaceholder variant="featured" />
+        <aside className="hero-card" aria-label="Identidad original y necesidad de StudyMatch">
+          <StudyMatchLogo variant="hero" />
+          <p className="hero-card__origin">
+            Identidad original · Startup del {PROJECT_INFO.originInstitution}
+          </p>
           <h2 className="hero-card__heading">Necesidad que atiende StudyMatch</h2>
-          <p className="hero-card__text">{PROJECT_INFO.heroNeedPlaceholder}</p>
+          <p className="hero-card__text">{PROJECT_INFO.heroNeedText}</p>
         </aside>
       </div>
     </section>
