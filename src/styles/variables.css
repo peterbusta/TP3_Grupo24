@@ -1,0 +1,40 @@
+:root {
+  /* Paleta académica: azul profundo, celeste y blanco */
+  --color-navy-950: #091d36;
+  --color-navy-900: #0f2b4c;
+  --color-navy-800: #173d68;
+  --color-navy-700: #1f5086;
+
+  --color-sky-600: #0e7bb5;
+  --color-sky-500: #2496d1;
+  --color-sky-400: #4bb5e8;
+  --color-sky-100: #e7f4fb;
+  --color-sky-50: #f3f9fd;
+
+  --color-surface: #ffffff;
+  --color-bg: #f6f9fc;
+  --color-border: #d5e3ef;
+  --color-border-strong: #b2cbe0;
+
+  --color-text-primary: #0f2238;
+  --color-text-secondary: #3f556e;
+  --color-text-muted: #5e748d;
+
+  /* Acento visual diferenciado para marcadores de prueba (Etapa 1) */
+  --color-placeholder-bg: #f0f7fc;
+  --color-placeholder-border: #64a9d4;
+  --color-placeholder-text: #154b73;
+
+  /* Tipografía de sistema (sin dependencias ni fuentes externas) */
+  --font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout y espaciado */
+  --container-max: 1120px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 8px rgba(15, 43, 76, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 43, 76, 0.08);
+  --transition: 180ms ease;
+}
