@@ -1,51 +1,51 @@
 # StudyMatch · Dos sentencias, dos soluciones (TP3)
 
-*Materia:* Desarrollo de Sistemas Web Front End — IFTS 29 (2026, 2do Cuatrimestre)  
-*Equipo:* Grupo 24  
-*Fecha de entrega:* 26/11/2026  
+- **Materia:** Desarrollo de Sistemas Web Front End — IFTS 29 (2026, 2do Cuatrimestre)
+- **Equipo:** Grupo 24
+- **Fecha de entrega:** 26/11/2026
 
 ---
 
 ## Enlaces del proyecto
-* *Repositorio:* https://github.com/Peterbusta/TP3_Grupo24
-* *Landing publicada:* (Pendiente de publicación y verificación)
+- **Repositorio:** [Peterbusta/TP3_Grupo24](https://github.com/Peterbusta/TP3_Grupo24)
+- **Landing publicada:** pendiente de publicación y verificación.
 
 ---
 
 ## Startup y bloque asignado
-* *Startup:* StudyMatch. (proyecto creado por estudiantes del IFTS 16)
-* *Área:* Educación y colaboración
-* *Objetivo:* Red que conecta estudiantes por materias, intereses, necesidades y disponibilidad.
-* *Bloque asignado:* S13-B · Invitación y consentimiento
+- **Startup:** StudyMatch, creada por estudiantes del IFTS 16.
+- **Área:** Educación y colaboración.
+- **Objetivo:** Red que conecta estudiantes por materias, intereses, necesidades y disponibilidad.
+- **Bloque asignado:** S13-B · Invitación y consentimiento.
 
 ### Sentencias originales
-* *R3:* «Si hay un compañero compatible y el estudiante autoriza contactarlo, el sistema envía una invitación sin incorporarlo automáticamente a un grupo».
-* *R4:* «Si ambas personas aceptan la invitación y mantienen una disponibilidad común, el sistema habilita el espacio para organizar el encuentro».
+- **R3:** «Si hay un compañero compatible y el estudiante autoriza contactarlo, el sistema envía una invitación sin incorporarlo automáticamente a un grupo».
+- **R4:** «Si ambas personas aceptan la invitación y mantienen una disponibilidad común, el sistema habilita el espacio para organizar el encuentro».
 
 ---
 
 ## Integrantes y aportes (Grupo 24)
-* *Flavia Berzuini:* 
-* *Pedro Matías Bustamante:* Creación y configuración inicial del repositorio grupal en GitHub (TP3_Grupo24).
-* *Brian:*
-* *Ludmila:*
+- **Flavia Berzuini:** aporte por confirmar.
+- **Pedro Matías Bustamante:** creación y configuración inicial del repositorio grupal en GitHub (`TP3_Grupo24`).
+- **Brian:** aporte por confirmar.
+- **Ludmila:** aporte por confirmar.
 
 ### Revisión entre integrantes y mejora concreta
-(Se documentará durante la Etapa 3 tras la revisión cruzada de la landing en desktop).
+Pendiente de realizar y documentar durante la Etapa 3. La mejora concreta se agregará cuando se complete la revisión cruzada.
 
 ---
 
 ## Construcción 100% agéntica: herramientas y modelos de IA
 Todo el código del proyecto fue generado y modificado exclusivamente mediante instrucciones a un agente de programación, sin edición manual de archivos.
 
-* *Aplicación utilizada:* Antigravity
-* *Modelo seleccionado:* Gemini 4 Neon High
-* *Tecnologías generadas:* React + Vite (HTML, CSS y JavaScript puro, sin backend, bases de datos ni APIs externas).
+- **Aplicación utilizada:** Antigravity.
+- **Modelo seleccionado:** Gemini 4 Neon High.
+- **Tecnologías generadas:** React + Vite (HTML, CSS y JavaScript, sin backend, bases de datos ni APIs externas).
 
 ### Registro del proceso por etapas
-* *Etapa 1 — Estructura base (Completada):* Se entregó al agente el encargo inicial con la consigna del TP3, la identidad de StudyMatch (reconociendo su origen en el IFTS 16), el bloque S13-B y las sentencias literales R3 y R4. El agente creó el proyecto en React + Vite, organizó los componentes (Header, HeroSection, IdentitySection, RuleCard, AccordionDetail accesible con clic y teclado, TeamSection, Footer), reservó los espacios provisorios para el logo y los diagramas, y validó la compilación inicial sin errores.
-* *Etapa 2 — Logo real, diagramas definitivos y desplegables (Completada):* Se solicitó al agente eliminar los textos de prueba y placeholders (LogoPlaceholder.jsx y DiagramPlaceholder.jsx) e integrar el logo original de StudyMatch (/assets/logo-studymatch.png mediante StudyMatchLogo.jsx) completo y sin recortes en encabezado y portada. Además, construyó FlowDiagram.jsx con dos diagramas gráficos independientes para R3 y R4 (flechas SVG, bifurcaciones rotuladas SÍ / NO y diferenciación visual entre regla original con trazo sólido y decisiones de diseño/casos límite del Grupo 24 con trazo discontinuo e intervención humana). Completó los desplegables accesibles en AccordionDetail.jsx con los 5 bloques requeridos (datos de entrada, herramienta conceptual del agente, condición, acción/resultado y contraste entre regla original y supuestos del grupo) y verificó npm run build sin errores.
-* *Etapa 3 — Pruebas en desktop e iteración (En curso):*
+- **Etapa 1 — Estructura base (completada):** Se entregó al agente el encargo inicial con la consigna del TP3, la identidad de StudyMatch (reconociendo su origen en el IFTS 16), el bloque S13-B y las sentencias literales R3 y R4. El agente creó el proyecto en React + Vite, organizó los componentes (Header, HeroSection, IdentitySection, RuleCard, AccordionDetail accesible con clic y teclado, TeamSection, Footer), reservó los espacios provisorios para el logo y los diagramas, y validó la compilación inicial sin errores.
+- **Etapa 2 — Logo real, diagramas definitivos y desplegables (completada):** Se solicitó al agente eliminar los textos de prueba y placeholders (LogoPlaceholder.jsx y DiagramPlaceholder.jsx) e integrar el logo original de StudyMatch (`/assets/logo-studymatch.png`, mediante StudyMatchLogo.jsx) completo y sin recortes en encabezado y portada. Además, construyó FlowDiagram.jsx con dos diagramas gráficos independientes para R3 y R4 (flechas SVG, bifurcaciones rotuladas SÍ / NO y diferenciación visual entre regla original con trazo sólido y decisiones de diseño/casos límite del Grupo 24 con trazo discontinuo e intervención humana). Completó los desplegables accesibles en AccordionDetail.jsx con los 5 bloques requeridos (datos de entrada, herramienta conceptual del agente, condición, acción/resultado y contraste entre regla original y supuestos del grupo) y verificó `npm run build` sin errores.
+- **Etapa 3 — Pruebas en desktop e iteración (en curso):**
   * **Herramienta y modelo de auditoría QA:** Gemini (`Gemini 4 Hydrogen`), utilizado para generar un checklist sistemático de verificación en navegador tomando como contexto el repositorio, sus archivos y la consigna del TP3.
   * **Instrucción (prompt) enviada:** «Quisiera que generaras un checklist de revisiones para verificar en el navegador que lo realizado hasta el momento en este trabajo no presente problemas de funcionamiento y visualización.»
   * **Checklist obtenido y aplicado en Brave (1366×768 / 1920×1080):**
@@ -97,7 +97,7 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
       > #### Resumen ejecutivo
       > | Categoría | Cantidad |
       > |---|---|
-      > | 🔴 Críticos | 4 |
+      > | 🔴 Críticos | 3 |
       > | 🟡 Mejoras visuales / UX | 7 |
       > | ✅ Sin observaciones | Accordion ARIA, keyboard, lógica R3/R4 |
       >
@@ -124,15 +124,38 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
       > * Eliminación completa de `"Etapa 1"` y `"stage-banner"` en el JSX renderizado, sin scroll horizontal en desktop.
       >
       > #### Prioridad recomendada para el cierre
-      > * **Inmediato:** `C1` (favicon en `index.html`), `C2` (`base` en `vite.config.js` o importación del logo desde `src/assets/`), `C3` (aportes reales del equipo en `content.js` y subtítulo de `TeamSection.jsx`), `C4` (limpieza de reglas CSS huérfanas).
+      > * **Inmediato:** `C1` (favicon en `index.html`), `C2` (`base` en `vite.config.js` o importación del logo desde `src/assets/`), `C3` (aportes reales del equipo en `content.js` y subtítulo de `TeamSection.jsx`).
       > * **Mejoras de revisión cruzada:** `M1` (`scroll-margin-top: 108px`), `M3` (`focus-visible` interno en accordion), `M4` (`hidden={!isOpen}` en panel).
-    * **Pedido de mejora al agente e iteración final:** *(Pendiente de ejecutar en Antigravity para aplicar las correcciones).*
-* *Etapa 4 — Documentación final y publicación:* (Pendiente).
+    * **Iteración técnica:** Se implementaron las correcciones aplicables de la auditoría. El estado vigente de cada hallazgo se resume a continuación.
+
+  **Estado actual de los hallazgos de QA:**
+  - **Resueltos:** C1 (favicon), C2 (rutas compatibles con subrutas), M1 (margen de desplazamiento), M3 (foco visible del acordeón), M4 (panel oculto con `hidden`), M5 (metadatos) y M6 (texto visible y accesible del acordeón).
+  - **Sin cambio necesario:** M2 (el SVG está contenido por el ancho máximo actual y se oculta en móvil) y M7 (el botón nativo ya admite Enter y Espacio).
+  - **Pendiente:** C3, hasta completar y confirmar los aportes individuales del equipo.
+
+- **Etapa 4 — Documentación final y publicación (pendiente):** falta completar la documentación final y publicar/verificar la landing.
 
 ---
 
 ## Cómo ejecutar el proyecto localmente
+Requisitos: Node.js y npm instalados.
+
 1. Clonar el repositorio e ingresar a la carpeta del proyecto:
    ```bash
-   git clone [https://github.com/Peterbusta/TP3_Grupo24.git](https://github.com/Peterbusta/TP3_Grupo24.git)
+   git clone https://github.com/Peterbusta/TP3_Grupo24.git
    cd TP3_Grupo24
+   ```
+2. Instalar las dependencias:
+   ```bash
+   npm install
+   ```
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+Para comprobar la compilación de producción y verla localmente:
+```bash
+npm run build
+npm run preview
+```
