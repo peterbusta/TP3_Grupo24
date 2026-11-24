@@ -77,19 +77,19 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
        * En vistas móviles (menores a `720px`), la bifurcación hacia la rama `NO` resulta poco intuitiva visualmente; se propone como mejora que la flecha hacia el `NO` recorra el costado lateral del bloque `SÍ` hacia abajo para evidenciar las dos salidas, o bien evaluar una vista simplificada donde al hacer clic en cada nodo se despliegue el texto completo.
     4. **Navegación Exclusiva por Teclado:** Funciona correctamente en todos los flujos utilizando `Tab`, `Enter` y `Space`; el foco recorre los botones, redirige a las anclas esperadas y abre/cierra los desplegables sin saltos bruscos ni superposiciones con el encabezado.
     5. **Residuos de Etapas Anteriores:** Persisten algunas etiquetas provisorias en el contenido, por lo que su limpieza queda registrada para la siguiente iteración junto con la carga definitiva de los aportes del equipo.
-* **Revisión agéntica con Antigravity:**
-   * Con la extensión de Antigravity para Visual Studio Code, utilizando el modelo `Claude Sonnet 4.6 (Thinking)` sobre el repositorio local del proyecto, se ejecutó una auditoría técnica mediante un prompt elaborado con apoyo de `Gemini 4 Hydrogen`.
-   * **Prompt enviado:**
-    > «Actuá como un auditor de QA Front End y Accesibilidad. **No modifiques ningún archivo todavía.** Revisá todo el código fuente de la rama actual (`src/`, `public/` e `index.html`) y generá un reporte técnico breve con los problemas reales o riesgos que encuentres en estos 6 puntos:
-    > 1. **Rutas de assets y producción:** Verificá que todas las imágenes (logo de StudyMatch y favicon en `index.html`) usen rutas compatibles con `vite build` y no fallen al desplegar en subrutas o en producción.
-    > 2. **Desbordes y SVG en desktop (`1024px` a `1920px`):** Revisá `FlowDiagram.jsx` y los archivos CSS para detectar anchos fijos (`width`), `viewBox` mal proporcionados, textos dentro de nodos SVG que puedan salirse de su caja o generar scroll horizontal en pantallas desktop.
-    > 3. **Anclas y header fijo:** Comprobá si las secciones destino (`#inicio`, `#regla-r3`, `#regla-r4`, `#equipo`) tienen `scroll-margin-top` suficiente para que el header fijo no tape los títulos al navegar desde el menú.
-    > 4. **Accesibilidad real en desplegables (`AccordionDetail.jsx`):** Verificá atributos ARIA (`aria-expanded`, `aria-controls`, `role="region"`), manejo correcto de teclado (`Enter` / `Space`) y estilos visibles de `:focus-visible`.
-    > 5. **Fidelidad lógica respecto a la consigna:** Contrastá los textos de R3 y R4 contra las sentencias literales del bloque S13-B y verificá que en ambos flujos se distinga claramente la regla original de los supuestos de diseño del Grupo 24 y la intervención humana.
-    > 6. **Textos residuales:** Buscá cualquier mención provisoria ("Etapa 1", "Etapa 2", "pendiente", "prueba") que haya quedado en el código renderizado.
-     >
-     > Listá únicamente los hallazgos concretos indicando archivo y línea, clasificados en **Críticos** (rompen consigna o visualización) y **Mejoras visuales/UX** (ideales para documentar nuestra revisión grupal en el README).»
-   * **Resultado de la auditoría (reporte devuelto por `Claude Sonnet 4.6 (Thinking)`):**
+  * **Revisión agéntica con Antigravity:**
+    * Con la extensión de Antigravity para Visual Studio Code, utilizando el modelo `Claude Sonnet 4.6 (Thinking)` sobre el repositorio local del proyecto, se ejecutó una auditoría técnica mediante un prompt elaborado con apoyo de `Gemini 4 Hydrogen`.
+    * **Prompt enviado:**
+      > «Actuá como un auditor de QA Front End y Accesibilidad. **No modifiques ningún archivo todavía.** Revisá todo el código fuente de la rama actual (`src/`, `public/` e `index.html`) y generá un reporte técnico breve con los problemas reales o riesgos que encuentres en estos 6 puntos:
+      > 1. **Rutas de assets y producción:** Verificá que todas las imágenes (logo de StudyMatch y favicon en `index.html`) usen rutas compatibles con `vite build` y no fallen al desplegar en subrutas o en producción.
+      > 2. **Desbordes y SVG en desktop (`1024px` a `1920px`):** Revisá `FlowDiagram.jsx` y los archivos CSS para detectar anchos fijos (`width`), `viewBox` mal proporcionados, textos dentro de nodos SVG que puedan salirse de su caja o generar scroll horizontal en pantallas desktop.
+      > 3. **Anclas y header fijo:** Comprobá si las secciones destino (`#inicio`, `#regla-r3`, `#regla-r4`, `#equipo`) tienen `scroll-margin-top` suficiente para que el header fijo no tape los títulos al navegar desde el menú.
+      > 4. **Accesibilidad real en desplegables (`AccordionDetail.jsx`):** Verificá atributos ARIA (`aria-expanded`, `aria-controls`, `role="region"`), manejo correcto de teclado (`Enter` / `Space`) y estilos visibles de `:focus-visible`.
+      > 5. **Fidelidad lógica respecto a la consigna:** Contrastá los textos de R3 y R4 contra las sentencias literales del bloque S13-B y verificá que en ambos flujos se distinga claramente la regla original de los supuestos de diseño del Grupo 24 y la intervención humana.
+      > 6. **Textos residuales:** Buscá cualquier mención provisoria ("Etapa 1", "Etapa 2", "pendiente", "prueba") que haya quedado en el código renderizado.
+      >
+      > Listá únicamente los hallazgos concretos indicando archivo y línea, clasificados en **Críticos** (rompen consigna o visualización) y **Mejoras visuales/UX** (ideales para documentar nuestra revisión grupal en el README).»
+    * **Resultado de la auditoría (reporte devuelto por `Claude Sonnet 4.6 (Thinking)`):**
       > ### Reporte QA Front End y Accesibilidad — TP3 Grupo 24
       > **Rama auditada:** `etapa-2-diagramas` · **Fecha:** 24/11/2026  
       > **Auditor:** Antigravity (modo solo lectura — sin modificaciones)
@@ -127,7 +127,7 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
       > #### Prioridad recomendada para el cierre
       > * **Inmediato:** `C1` (favicon en `index.html`), `C2` (`base` en `vite.config.js` o importación del logo desde `src/assets/`), `C3` (aportes reales del equipo en `content.js` y subtítulo de `TeamSection.jsx`), `C4` (limpieza de reglas CSS huérfanas).
       > * **Mejoras de revisión cruzada:** `M1` (`scroll-margin-top: 108px`), `M3` (`focus-visible` interno en accordion), `M4` (`hidden={!isOpen}` en panel).
-    * **Pedido de mejora al agente e iteración final:** 
+    * **Pedido de mejora al agente e iteración final:** *(Pendiente de ejecutar en Antigravity para aplicar las correcciones).*
 * *Etapa 4 — Documentación final y publicación:* (Pendiente).
 
 ---
