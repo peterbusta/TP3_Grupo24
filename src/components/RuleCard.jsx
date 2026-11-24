@@ -1,5 +1,5 @@
 import AccordionDetail from './AccordionDetail';
-import DiagramPlaceholder from './DiagramPlaceholder';
+import FlowDiagram from './FlowDiagram';
 
 export default function RuleCard({ rule }) {
   return (
@@ -32,15 +32,12 @@ export default function RuleCard({ rule }) {
         <strong>Aclaración clave:</strong> {rule.keyClarification}
       </p>
 
-      <DiagramPlaceholder
-        code={rule.code}
-        title={rule.diagramTitle}
-        note={rule.diagramNote}
-      />
+      <FlowDiagram code={rule.code} diagram={rule.diagram} />
 
       <AccordionDetail
+        code={rule.code}
         label={rule.accordionLabel}
-        placeholderText={rule.accordionPlaceholder}
+        details={rule.details}
       />
     </article>
   );
