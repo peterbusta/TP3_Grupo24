@@ -21,61 +21,60 @@ export default function AccordionDetail({ code, label, details }) {
         </span>
       </button>
 
-      {isOpen && (
-        <div
-          id={panelId}
-          role="region"
-          aria-labelledby={buttonId}
-          className="accordion__panel"
-        >
-          <div className="detail-grid">
-            <div className="detail-item">
-              <h4 className="detail-item__title">1. Qué datos entran</h4>
-              <p className="detail-item__text">{details.inputs}</p>
-            </div>
-
-            <div className="detail-item">
-              <h4 className="detail-item__title">
-                2. Herramienta conceptual del futuro agente
-              </h4>
-              <p className="detail-item__text">{details.conceptualTools}</p>
-            </div>
-
-            <div className="detail-item">
-              <h4 className="detail-item__title">3. Qué condición evalúa</h4>
-              <p className="detail-item__text">{details.condition}</p>
-            </div>
-
-            <div className="detail-item">
-              <h4 className="detail-item__title">
-                4. Acción propuesta y resultado esperado
-              </h4>
-              <p className="detail-item__text">{details.actionAndResult}</p>
-            </div>
+      <div
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        className="accordion__panel"
+        hidden={!isOpen}
+      >
+        <div className="detail-grid">
+          <div className="detail-item">
+            <h4 className="detail-item__title">1. Qué datos entran</h4>
+            <p className="detail-item__text">{details.inputs}</p>
           </div>
 
-          <div className="detail-comparison">
-            <div className="detail-box detail-box--rule">
-              <span className="flow-source flow-source--rule">
-                Surge de la regla original ({code})
-              </span>
-              <p className="detail-item__text">{details.originalRuleScope}</p>
-            </div>
+          <div className="detail-item">
+            <h4 className="detail-item__title">
+              2. Herramienta conceptual del futuro agente
+            </h4>
+            <p className="detail-item__text">{details.conceptualTools}</p>
+          </div>
 
-            <div className="detail-box detail-box--design">
-              <div className="detail-box__tags">
-                <span className="flow-source flow-source--design">
-                  Decisión de diseño · Grupo 24
-                </span>
-                <span className="flow-source flow-source--human">
-                  Caso límite e intervención humana
-                </span>
-              </div>
-              <p className="detail-item__text">{details.groupDesignDecision}</p>
-            </div>
+          <div className="detail-item">
+            <h4 className="detail-item__title">3. Qué condición evalúa</h4>
+            <p className="detail-item__text">{details.condition}</p>
+          </div>
+
+          <div className="detail-item">
+            <h4 className="detail-item__title">
+              4. Acción propuesta y resultado esperado
+            </h4>
+            <p className="detail-item__text">{details.actionAndResult}</p>
           </div>
         </div>
-      )}
+
+        <div className="detail-comparison">
+          <div className="detail-box detail-box--rule">
+            <span className="flow-source flow-source--rule">
+              Surge de la regla original ({code})
+            </span>
+            <p className="detail-item__text">{details.originalRuleScope}</p>
+          </div>
+
+          <div className="detail-box detail-box--design">
+            <div className="detail-box__tags">
+              <span className="flow-source flow-source--design">
+                Decisión de diseño · Grupo 24
+              </span>
+              <span className="flow-source flow-source--human">
+                Caso límite e intervención humana
+              </span>
+            </div>
+            <p className="detail-item__text">{details.groupDesignDecision}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
