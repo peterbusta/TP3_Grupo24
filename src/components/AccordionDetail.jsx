@@ -1,12 +1,20 @@
 import { useId, useState } from 'react';
+import {
+  CheckCircleIcon,
+  CpuIcon,
+  DatabaseIcon,
+  GitBranchIcon,
+  ShieldCheckIcon,
+  UserCheckIcon,
+} from './Icons';
 
-export default function AccordionDetail({ code, label, details }) {
+export default function AccordionDetail({ code, variant = 'r3', label, details }) {
   const [isOpen, setIsOpen] = useState(false);
   const panelId = useId();
   const buttonId = useId();
 
   return (
-    <div className="accordion">
+    <div className={`accordion accordion--${variant}`}>
       <button
         id={buttonId}
         type="button"
@@ -33,25 +41,41 @@ export default function AccordionDetail({ code, label, details }) {
       >
         <div className="detail-grid">
           <div className="detail-item">
-            <h4 className="detail-item__title">1. Qué datos entran</h4>
+            <h4 className="detail-item__title">
+              <span className="detail-item__icon">
+                <DatabaseIcon />
+              </span>
+              <span>1. Qué datos entran</span>
+            </h4>
             <p className="detail-item__text">{details.inputs}</p>
           </div>
 
           <div className="detail-item">
             <h4 className="detail-item__title">
-              2. Herramienta conceptual del futuro agente
+              <span className="detail-item__icon">
+                <CpuIcon />
+              </span>
+              <span>2. Herramienta conceptual del futuro agente</span>
             </h4>
             <p className="detail-item__text">{details.conceptualTools}</p>
           </div>
 
           <div className="detail-item">
-            <h4 className="detail-item__title">3. Qué condición evalúa</h4>
+            <h4 className="detail-item__title">
+              <span className="detail-item__icon">
+                <GitBranchIcon />
+              </span>
+              <span>3. Qué condición evalúa</span>
+            </h4>
             <p className="detail-item__text">{details.condition}</p>
           </div>
 
           <div className="detail-item">
             <h4 className="detail-item__title">
-              4. Acción propuesta y resultado esperado
+              <span className="detail-item__icon">
+                <CheckCircleIcon />
+              </span>
+              <span>4. Acción propuesta y resultado esperado</span>
             </h4>
             <p className="detail-item__text">{details.actionAndResult}</p>
           </div>
@@ -60,6 +84,7 @@ export default function AccordionDetail({ code, label, details }) {
         <div className="detail-comparison">
           <div className="detail-box detail-box--rule">
             <span className="flow-source flow-source--rule">
+              <ShieldCheckIcon className="flow-source__icon" />
               Surge de la regla original ({code})
             </span>
             <p className="detail-item__text">{details.originalRuleScope}</p>
@@ -71,6 +96,7 @@ export default function AccordionDetail({ code, label, details }) {
                 Decisión de diseño · Grupo 24
               </span>
               <span className="flow-source flow-source--human">
+                <UserCheckIcon className="flow-source__icon" />
                 Caso límite e intervención humana
               </span>
             </div>

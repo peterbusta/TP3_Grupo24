@@ -30,8 +30,17 @@ export default function App() {
             </div>
 
             <div className="rules-stack">
-              {RULES.map((rule) => (
-                <RuleCard key={rule.id} rule={rule} />
+              {RULES.map((rule, index) => (
+                <div key={rule.id} className="rules-stack__item">
+                  <RuleCard rule={rule} />
+                  {index < RULES.length - 1 && (
+                    <div className="stage-bridge" aria-hidden="true">
+                      <span className="stage-bridge__line" />
+                      <span className="stage-bridge__dot" />
+                      <span className="stage-bridge__line" />
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
