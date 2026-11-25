@@ -8,7 +8,7 @@
 
 ## Enlaces del proyecto
 - **Repositorio:** [Peterbusta/TP3_Grupo24](https://github.com/Peterbusta/TP3_Grupo24)
-- **Landing publicada:** Pendiente de publicación y verificación.
+- **Landing publicada:** https://tp3-grupo24.vercel.app/
 
 ---
 
