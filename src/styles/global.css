@@ -286,26 +286,25 @@ button {
   border: 1px solid transparent;
   cursor: pointer;
   transition: background-color var(--transition), border-color var(--transition),
-    transform var(--transition);
+    color var(--transition), transform var(--transition);
 }
 
-.btn--primary {
-  background-color: var(--color-sky-400);
-  color: var(--color-navy-950);
-}
-
-.btn--primary:hover {
-  background-color: #6bc4ef;
-}
-
-.btn--ghost {
-  background-color: transparent;
+.btn--hero {
+  background-color: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.45);
   color: #ffffff;
 }
 
-.btn--ghost:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.btn--hero:hover,
+.btn--hero:focus-visible {
+  background-color: var(--color-sky-400);
+  border-color: var(--color-sky-400);
+  color: var(--color-navy-950);
+}
+
+.btn--hero:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .hero-card {
@@ -335,6 +334,8 @@ button {
   color: var(--color-text-secondary);
   margin-bottom: 0;
   line-height: 1.62;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 /* Identidad y reconocimiento */
@@ -377,6 +378,8 @@ button {
 .info-list li {
   font-size: 0.96rem;
   color: var(--color-text-secondary);
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .info-list strong {
@@ -869,6 +872,8 @@ button {
   color: var(--color-text-secondary);
   margin: 0;
   line-height: 1.58;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .detail-comparison {

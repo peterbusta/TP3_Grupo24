@@ -10,7 +10,7 @@ export default function HeroSection() {
             {PROJECT_INFO.presentingInstitution} · {PROJECT_INFO.tpTitle}
           </span>
           <h1 className="hero-title">
-            {PROJECT_INFO.startupName}: {PROJECT_INFO.assignedBlock}
+            {PROJECT_INFO.startupName} · {PROJECT_INFO.assignedBlock}
           </h1>
           <p className="hero-lead">{PROJECT_INFO.objective}</p>
 
@@ -38,10 +38,10 @@ export default function HeroSection() {
           </div>
 
           <div className="hero-actions">
-            <a href="#regla-r3" className="btn btn--primary">
+            <a href="#regla-r3" className="btn btn--hero">
               Ver sentencia R3
             </a>
-            <a href="#regla-r4" className="btn btn--ghost">
+            <a href="#regla-r4" className="btn btn--hero">
               Ver sentencia R4
             </a>
           </div>

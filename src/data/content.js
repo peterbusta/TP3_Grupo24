@@ -14,10 +14,63 @@ export const PROJECT_INFO = {
   area: 'Educación y colaboración',
   objective:
     'Red que conecta estudiantes por materias, intereses, necesidades y disponibilidad.',
-  assignedBlock: 'S13-B · Invitación y consentimiento',
+  assignedBlock: 'Invitación y consentimiento',
   groupName: 'Grupo 24',
   heroNeedText:
     'Estudiar en grupo potencia el aprendizaje, pero encontrar compañeros afines suele derivar en contactos no deseados, invitaciones invasivas o coordinaciones fallidas por incompatibilidad horaria. StudyMatch ayuda a estudiantes a conectar con pares compatibles por materias, intereses, necesidades y disponibilidad, cuidando el consentimiento y la disponibilidad real en cada paso.',
+};
+
+export const IDENTITY_SECTION = {
+  eyebrow: 'ARTICULACIÓN IFTS 16 · IFTS 29',
+  title: 'Origen de StudyMatch y propuesta del Grupo 24',
+  subtitlePrefix:
+    'Esta landing respeta la identidad original de la startup creada en el IFTS 16 y presenta las dos soluciones conceptuales del bloque ',
+  subtitleStrong: 'Invitación y consentimiento',
+  subtitleSuffix: ', elaboradas por estudiantes del IFTS 29.',
+  cards: [
+    {
+      variant: 'accent',
+      title: 'Identidad original de la startup',
+      items: [
+        { label: 'Startup:', value: 'StudyMatch.' },
+        {
+          label: 'Origen:',
+          value:
+            'Creada por estudiantes del IFTS 16, quienes definieron sus condiciones de funcionamiento mediante lógica proposicional.',
+        },
+        { label: 'Área:', value: 'Educación y colaboración.' },
+        {
+          label: 'Objetivo:',
+          value:
+            'Red que conecta estudiantes por materias, intereses, necesidades y disponibilidad.',
+        },
+      ],
+    },
+    {
+      variant: 'sky',
+      title: 'Propuesta del Grupo 24 (IFTS 29)',
+      items: [
+        {
+          label: 'Equipo y materia:',
+          value: 'Grupo 24 · Desarrollo de Sistemas Web (Front End), IFTS 29.',
+        },
+        {
+          label: 'Bloque trabajado:',
+          value: 'Invitación y consentimiento (Sentencias R3 y R4).',
+        },
+        {
+          label: 'Alcance de la propuesta:',
+          value:
+            'Diseño y comunicación visual de dos flujos agénticos conceptuales que respetan las reglas originales e incorporan casos límite e intervención humana.',
+        },
+        {
+          label: 'Metodología:',
+          value:
+            'Construcción 100% agéntica dirigida, revisada y validada por el equipo (TP3 «Dos sentencias, dos soluciones»).',
+        },
+      ],
+    },
+  ],
 };
 
 export const RULES = [
@@ -25,7 +78,7 @@ export const RULES = [
     id: 'regla-r3',
     code: 'R3',
     variant: 'r3',
-    blockLabel: 'Bloque S13-B · Invitación y consentimiento',
+    blockLabel: 'Invitación y consentimiento',
     literalSentence:
       '«Si hay un compañero compatible y el estudiante autoriza contactarlo, el sistema envía una invitación sin incorporarlo automáticamente a un grupo».',
     proposalTitle: 'Invitación inteligente con consentimiento',
@@ -77,7 +130,7 @@ export const RULES = [
     id: 'regla-r4',
     code: 'R4',
     variant: 'r4',
-    blockLabel: 'Bloque S13-B · Invitación y consentimiento',
+    blockLabel: 'Invitación y consentimiento',
     literalSentence:
       '«Si ambas personas aceptan la invitación y mantienen una disponibilidad común, el sistema habilita el espacio para organizar el encuentro».',
     proposalTitle: 'Habilitación del espacio de encuentro',

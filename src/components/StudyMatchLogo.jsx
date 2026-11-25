@@ -12,8 +12,8 @@ export default function StudyMatchLogo({ variant = 'header' }) {
       />
       {!isHero && (
         <div className="brand-logo__meta">
-          <span className="brand-logo__origin">IFTS 16 · Bloque S13-B</span>
-          <span className="brand-logo__group">Propuesta Grupo 24 · IFTS 29</span>
+          <span className="brand-logo__origin">IFTS 29 · Grupo 24</span>
+          <span className="brand-logo__group">Propuesta para StudyMatch</span>
         </div>
       )}
     </div>
