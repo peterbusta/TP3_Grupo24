@@ -180,25 +180,46 @@ export const RULES = [
   },
 ];
 
+export const TEAM_SECTION = {
+  eyebrow: 'EQUIPO CREADOR · IFTS 29',
+  title: 'Devopoly · Grupo 24',
+  subtitle:
+    'Cuatro miradas para un mismo desafío: transformar las reglas de StudyMatch en una propuesta clara, confiable y centrada en las personas.',
+  logoFile: 'logo-devopoly.png',
+  logoAlt: 'Logo del equipo Devopoly · Grupo 24 (IFTS 29)',
+};
+
 export const TEAM_MEMBERS = [
   {
     name: 'Brian',
-    group: 'Grupo 24 · IFTS 29',
-    contribution: 'Aporte individual a completar por el equipo.',
+    accent: 'teal',
+    avatar: 'avatar-brian.png',
+    alt: 'Avatar ilustrado de Brian, integrante del Grupo 24 del IFTS 29',
+    quote:
+      '«Cuidar que la interfaz sea clara, accesible y funcione sin fricciones en cada interacción.»',
   },
   {
     name: 'Ludmila',
-    group: 'Grupo 24 · IFTS 29',
-    contribution: 'Aporte individual a completar por el equipo.',
+    accent: 'violet',
+    avatar: 'avatar-ludmila.png',
+    alt: 'Avatar ilustrado de Ludmila, integrante del Grupo 24 del IFTS 29',
+    quote:
+      '«Traducir reglas lógicas en una propuesta que cualquier persona pueda recorrer y entender.»',
   },
   {
     name: 'Pedro',
-    group: 'Grupo 24 · IFTS 29',
-    contribution: 'Aporte individual a completar por el equipo.',
+    accent: 'teal',
+    avatar: 'avatar-pedro.png',
+    alt: 'Avatar ilustrado de Pedro, integrante del Grupo 24 del IFTS 29',
+    quote:
+      '«Validar que cada flujo y detalle técnico responda con precisión a las condiciones originales.»',
   },
   {
     name: 'Flavia',
-    group: 'Grupo 24 · IFTS 29',
-    contribution: 'Aporte individual a completar por el equipo.',
+    accent: 'violet',
+    avatar: 'avatar-flavia.png',
+    alt: 'Avatar ilustrado de Flavia, integrante del Grupo 24 del IFTS 29',
+    quote:
+      '«Diseñar flujos donde la automatización ayude a conectar, pero el consentimiento siempre sea humano.»',
   },
 ];
