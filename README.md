@@ -25,13 +25,14 @@
 ---
 
 ## Integrantes y aportes (Grupo 24)
-- **Flavia Berzuini:** aporte por confirmar.
-- **Pedro Matías Bustamante:** creación y configuración inicial del repositorio grupal en GitHub (`TP3_Grupo24`).
-- **Brian:** aporte por confirmar.
-- **Ludmila:** aporte por confirmar.
+- **Flavia Berzuini:** Planificación por etapas, redacción de prompts y dirección agéntica (Etapas 1 y 2: estructura base, logo original de StudyMatch, diagramas R3/R4 y desplegables), ajustes de jerarquía textual/identidad institucional y dirección de las iteraciones de rediseño visual EdTech.
+- **Pedro Matías Bustamante:** Creación y configuración inicial del repositorio grupal en GitHub (`TP3_Grupo24`), pruebas manuales en navegador Brave y ejecución de la auditoría técnica QA con Antigravity.
+- **Brian:** Revisión de avances, resolución de los hallazgos técnicos y de accesibilidad de la auditoría QA (C1, C2, M1, M3, M4, M5 y M6) y validación técnica de la landing.
+- **Ludmila:** Análisis de consigna y rúbrica, control del cumplimiento de las mismas. Estructuración, redacción y organización de la documentación del proyecto en el `README.md`. Construcción de la sección `Devopoly · Grupo 24`.
 
 ### Revisión entre integrantes y mejora concreta
-Pendiente de realizar y documentar durante la Etapa 3. La mejora concreta se agregará cuando se complete la revisión cruzada.
+1. **Auditoría QA y correcciones técnicas:** Auditoría ejecutada por Pedro (pruebas manuales en Brave y auditoría solo lectura con `Claude Sonnet 4.6`) y correcciones aplicadas por Brian (favicon, rutas compatibles con subrutas, `scroll-margin-top`, foco visible y accesibilidad de acordeones).
+2. **Revisión contra rúbrica y rediseño visual:** Revisión de contenido contra la consigna y la rúbrica por Ludmila, junto con la propuesta de rediseño visual realizada por Flavia en la rama `rediseno-visual`, abierta como Pull Request para revisión y aprobación del equipo antes de integrar a `main`.
 
 ---
 
@@ -44,7 +45,7 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
 
 ### Registro del proceso por etapas
 - **Etapa 1 — Estructura base (completada):** Se entregó al agente el encargo inicial con la consigna del TP3, la identidad de StudyMatch (reconociendo su origen en el IFTS 16), el bloque S13-B y las sentencias literales R3 y R4. El agente creó el proyecto en React + Vite, organizó los componentes (Header, HeroSection, IdentitySection, RuleCard, AccordionDetail accesible con clic y teclado, TeamSection, Footer), reservó los espacios provisorios para el logo y los diagramas, y validó la compilación inicial sin errores.
-- **Etapa 2 — Logo real, diagramas definitivos y desplegables (completada):** Se solicitó al agente eliminar los textos de prueba y placeholders (LogoPlaceholder.jsx y DiagramPlaceholder.jsx) e integrar el logo original de StudyMatch (`/assets/logo-studymatch.png`, mediante StudyMatchLogo.jsx) completo y sin recortes en encabezado y portada. Además, construyó FlowDiagram.jsx con dos diagramas gráficos independientes para R3 y R4 (flechas SVG, bifurcaciones rotuladas SÍ / NO y diferenciación visual entre regla original con trazo sólido y decisiones de diseño/casos límite del Grupo 24 con trazo discontinuo e intervención humana). Completó los desplegables accesibles en AccordionDetail.jsx con los 5 bloques requeridos (datos de entrada, herramienta conceptual del agente, condición, acción/resultado y contraste entre regla original y supuestos del grupo) y verificó `npm run build` sin errores.
+- **Etapa 2 — Logo real, diagramas definitivos y desplegables (completada):** Se solicitó al agente eliminar los textos de prueba y placeholders (LogoPlaceholder.jsx y DiagramPlaceholder.jsx) e integrar el logo original de StudyMatch (`/assets/logo-studymatch.png`, mediante StudyMatchLogo.jsx) completo y sin recortes en encabezado y portada. Además, se construyó `FlowDiagram.jsx` con dos diagramas gráficos independientes para R3 y R4 (flechas SVG, bifurcaciones rotuladas SÍ / NO y diferenciación visual entre regla original con trazo sólido y decisiones de diseño/casos límite del Grupo 24 con trazo discontinuo e intervención humana). Completó los desplegables accesibles en AccordionDetail.jsx con los 5 bloques requeridos (datos de entrada, herramienta conceptual del agente, condición, acción/resultado y contraste entre regla original y supuestos del grupo) y verificó `npm run build` sin errores.
 - **Etapa 3 — Pruebas en desktop e iteración (en curso):**
   * **Herramienta y modelo de auditoría QA:** Gemini (`Gemini 4 Hydrogen`), utilizado para generar un checklist sistemático de verificación en navegador tomando como contexto el repositorio, sus archivos y la consigna del TP3.
   * **Instrucción (prompt) enviada:** «Quisiera que generaras un checklist de revisiones para verificar en el navegador que lo realizado hasta el momento en este trabajo no presente problemas de funcionamiento y visualización.»
@@ -129,9 +130,14 @@ Todo el código del proyecto fue generado y modificado exclusivamente mediante i
     * **Iteración técnica:** Se implementaron las correcciones aplicables de la auditoría. El estado vigente de cada hallazgo se resume a continuación.
 
   **Estado actual de los hallazgos de QA:**
-  - **Resueltos:** C1 (favicon), C2 (rutas compatibles con subrutas), M1 (margen de desplazamiento), M3 (foco visible del acordeón), M4 (panel oculto con `hidden`), M5 (metadatos) y M6 (texto visible y accesible del acordeón).
+  - **Resueltos:** C1 (favicon), C2 (rutas compatibles con subrutas), C3 (eliminados los textos provisorios de `TeamSection.jsx` y `content.js` al integrar la identidad `Devopoly · Grupo 24`, los avatares y las frases del equipo), M1 (margen de desplazamiento), M3 (foco visible del acordeón), M4 (panel oculto con `hidden`), M5 (metadatos) y M6 (texto visible y accesible del acordeón).
   - **Sin cambio necesario:** M2 (el SVG está contenido por el ancho máximo actual y se oculta en móvil) y M7 (el botón nativo ya admite Enter y Espacio).
-  - **Pendiente:** C3, hasta completar y confirmar los aportes individuales del equipo.
+  - **Pendiente:** ninguno (todos los hallazgos críticos y mejoras aplicables quedaron resueltos).
+
+- **Iteraciones recientes (sobre `main` y rama `rediseno-visual`):**
+  * **Iteración 3.1 — Revisión textual y jerarquía institucional:** contraste punto por punto con la consigna y la rúbrica; reordenamiento de autoría en el encabezado (`IFTS 29 · Grupo 24` / `Propuesta para StudyMatch`), eliminación del código de sorteo `S13-B` en títulos y etiquetas, reformulación de la sección de articulación IFTS 16 · IFTS 29 y ajuste del pie de página.
+  * **Iteración 3.2 — Rediseño visual EdTech (rama `rediseno-visual`):** incorporación de tipografía `Inter` con suavizado sobre fondos oscuros, paleta diferenciada turquesa (R3) y violeta (R4), unificación de Header/Footer, limpieza del Hero (eliminación de nodos y grilla de puntos, detalle geométrico localizado y botones R3/R4 coordinados).
+  * **Iteración 3.3 — Identidad propia del equipo (`TeamSection.jsx`):** integración opcional de `Devopoly · Grupo 24` (logo propio, avatares y frases de enfoque en panel oscuro glassmorphism) diferenciada de StudyMatch (IFTS 16).
 
 - **Etapa 4 — Documentación final y publicación (pendiente):** falta completar la documentación final y publicar/verificar la landing.
 
